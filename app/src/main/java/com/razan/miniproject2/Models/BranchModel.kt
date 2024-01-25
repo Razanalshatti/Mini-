@@ -2,14 +2,19 @@ package com.razan.miniproject2.Models
 
 data class BranchModel(
 
-    val id: Int,
-    val name: String,
-    val type: BranchType,
-    val address: String,
-    val phone: String,
-    val hours: String,
-    val location: String,
-    val imageUri: Int
+    var id: Int,
+    var name: String,
+    var type: BranchType,
+    var address: String,
+    var phone: String,
+    var hours: String,
+    var location: String,
+    var imageURI: Int
 
 
 )
+
+
+
+
+
