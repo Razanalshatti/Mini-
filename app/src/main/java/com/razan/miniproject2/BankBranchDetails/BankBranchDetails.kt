@@ -1,89 +1,54 @@
 package com.razan.miniproject2.BankBranchDetails
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.Button
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Card
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.unit.dp
+import com.razan.miniproject2.Models.BranchModel
+import com.razan.miniproject2.Models.BranchType
+import com.razan.miniproject2.R
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
-import com.razan.miniproject2.R
-import java.lang.reflect.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 
 @Composable
-fun BranchDetailsPage(branch: Branch, onOpenLocationClicked: () -> Unit) {
+fun BranchDetailsPage(modifier: Modifier = Modifier) {
+Card(modifier = Modifier
+    .fillMaxWidth()
+    .height(100.dp)) {
 
-    Column(
-
-        modifier = Modifier.fillMaxSize()
-
-            .padding(16.dp)
-
-    ) {
-
-        // Display branch image at the top
-
-        Image(
-
-            painter = painterResource(id = branch.imageUri ?: R.drawable.default_image),
-
-            contentDescription = null,
-
-            modifier = Modifier
-
-                .fillMaxWidth()
-
-                .height(200.dp),
-
-            contentScale = ContentScale.Crop
-
-        )
-
-
-
-        // Display other branch information
-
-        Spacer(modifier = Modifier.height(16.dp))
-
-        Text(text = "Name: ${branch.name}", fontSize = 20.sp, fontWeight = FontWeight.Bold)
-
-        Text(text = "Type: ${branch.type.name}", fontSize = 16.sp)
-
-        Text(text = "Address: ${branch.address}", fontSize = 16.sp)
-
-        Text(text = "Phone: ${branch.phone}", fontSize = 16.sp)
-
-        Text(text = "Hours: ${branch.hours}", fontSize = 16.sp)
-
-        Text(text = "Location: ${branch.location}", fontSize = 16.sp)
-
-
-
-        // Button to open branch location URL in a browser
-
-        Spacer(modifier = Modifier.height(16.dp))
-
-        Button(
-
-            onClick = { onOpenLocationClicked() },
-
-            modifier = Modifier
-
-                .fillMaxWidth()
-
-                .padding(8.dp)
-
-        ) {
-
-            Text(text = "Open Location in Browser")
+    Row {
+        Box (modifier = Modifier){
+            Image(modifier = Modifier.fillMaxWidth(),painter = painterResource(id = R.drawable.kfhauto), contentDescription = "KFHAUTO" , alignment = Alignment.Center, contentScale = ContentScale.FillHeight )
+        }
+        Column(modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 20.dp, vertical = 8.dp)) {
+            
+            Text(text = "KFHAUTO")
+            Text(text = )
 
         }
-
     }
 
 }
+}
+
+@Preview (showBackground = true)
+@Composable
+fun BranchCardPreview(){
+    BranchDetailsPage(
+        BranchDetailsPage()
+    )
+}
+
+
