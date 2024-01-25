@@ -14,13 +14,13 @@ class BranchRepo {
         fun getBranchListDummyData(): List<BranchModel> {
             return listOf(
                 BranchModel(
-                    123, "AlJahra Branch", type = BranchType.BRANCH, "K", "121", "213", "1232",
+                     123, "AlJahra Branch", type = BranchType.BRANCH, "Capital of Jahra", "1803333", "8:00AM - 7:30PM", "AlJahra",
                     R.drawable.kfhjahra),
-                BranchModel(345, "132", type = BranchType.BRANCH,
-                    "ar", "121", "213", "1232", R.drawable.kfhkhalediyah ),
-                BranchModel(678, "132", type = BranchType.KFHAUTO, "ar", "121", "213", "1232", R.drawable.kfhauto),
-                BranchModel(910, "132", type = BranchType.KFHGO, "ar", "121", "213", "1232", R.drawable.kfhjabriya),
-                BranchModel(112, "132", type = BranchType.FOREIGN, "ar", "121", "213", "1232", R.drawable.kfhsalmiyahwataniah)
+                BranchModel(345, "AlKhalediyah Branch", type = BranchType.BRANCH,
+                    "Kuwait City Asimaa", "1803333", "8:00AM - 7:30PM", "Alkhalediyah", R.drawable.kfhkhalediyah ),
+                BranchModel(678, "KFHAUTO", type = BranchType.KFHAUTO, "Shuwaikh", "1803333", "8:00AM - 7:30PM", "Shuwaikh", R.drawable.kfhauto),
+                BranchModel(910, "Jabriyah CO-OP", type = BranchType.KFHGO, "Jabriyah", "1803333", "8:00AM - 7:30PM", "Hawaly", R.drawable.kfhjabriya),
+                BranchModel(112, "Salmiyah AlWataniah", type = BranchType.FOREIGN, "Salmiyah", "1803333", "8:00AM - 7:30PM", "Salmiah", R.drawable.kfhsalmiyahwataniah)
             )
         }
     }
