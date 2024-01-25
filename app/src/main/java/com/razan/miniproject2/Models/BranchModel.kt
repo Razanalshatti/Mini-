@@ -1,5 +1,6 @@
 package com.razan.miniproject2.Models
 
+
 data class BranchModel(
 
     var id: Int,

@@ -3,6 +3,7 @@ package com.razan.miniproject2.Repo
 import com.razan.miniproject2.Models.BranchModel
 import com.razan.miniproject2.Models.BranchType
 
+
 class BranchRepo {
     companion object{
         val branchList = listOf<BranchModel>(
