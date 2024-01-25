@@ -10,7 +10,7 @@ data class BranchModel(
     var phone: String,
     var hours: String,
     var location: String,
-    var imageURI: Int
+    var imageURL: Int
 
 
 )
